@@ -1,0 +1,21 @@
+def mayor_elemento(cadenas):
+    """
+    Retorna el mayor elemento de una lista de strings `cadenas`.
+    Ejemplo:
+        mayor_elemento(cadenas=["x", "y", "z"]) -> "z"
+    -Parámetros:
+        -cadenas (list; elementos: str): La lista donde se buscará el mayor elemento.
+    -Valor retornado:
+        (str / None) El mayor de los strings contenidos en la lista. Si la lista está vacía, retorna None.
+    """
+    if not cadenas:
+        return None
+
+    mayor = cadenas[0]
+    for cadena in cadenas:
+        if cadena > mayor:
+            mayor = cadena
+
+    return mayor
+ ej:
+print(mayor_elemento(["x","a","g","t", "y", "v"]))
