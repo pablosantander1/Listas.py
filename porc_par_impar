@@ -1,0 +1,21 @@
+
+def porcentaje_pares_impares(numeros):
+    """
+    Dada una lista `numeros`, retorna en una tupla el porcentaje de números pares e impares que contiene.
+    La lista contendrá al menos un elemento.
+    """
+    total = len(numeros)
+    pares = 0
+
+    for n in numeros:
+        if n % 2 == 0:
+            pares += 1
+
+    impares = total - pares
+
+    porcentaje_pares = (pares / total) * 100
+    porcentaje_impares = (impares / total) * 100
+
+    return (porcentaje_pares, porcentaje_impares)
+
+print(porcentaje_pares_impares([1,50, 20, 70, 60, 80]))
