@@ -1,0 +1,20 @@
+def mayor_ganancia(precios):
+    """
+    Dada una lista `precios` donde cada elemento representa el precio de las acciones de una empresa en un día
+    determinado, retorna la mayor ganancia posible, considerando que se compra al precio más bajo registrado y se vende
+    al precio más alto registrado. La lista no está en orden cronológico y las acciones pueden comprarse y venderse en
+    cualquiera de los precios que aparecen en ella. La lista contendrá al menos dos elementos.
+    """
+    menor = precios[0]
+    mayor = precios[0]
+
+    for precio in precios:
+        if precio < menor:
+            menor = precio
+        if precio > mayor:
+            mayor = precio
+
+    return mayor - menor
+    
+    ej:
+print(mayor_ganancia([5800, 2500, 1500, 10000, 3000, 5500]))
