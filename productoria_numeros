@@ -1,0 +1,20 @@
+def productoria_numeros(numeros):
+    """
+    Retorna el producto de todos los números en la lista `numeros`. La lista solo contendrá números.
+    Ejemplo:
+        productoria_numeros(numeros=[1, 2, 3, 4]) -> 24
+    -Parámetros:
+        -numeros (list, elementos: numéricos): Lista cuyos números se multiplicarán.
+    -Valor retornado:
+        (numérico / None) El producto de todos los números en la lista. Si la lista está vacía, retorna None.
+    """
+    if not numeros:
+        return None
+
+    producto = 1
+    for numero in numeros:
+        producto *= numero
+
+    return producto
+ej:
+print(productoria_numeros([1,12,33,57,45,58,15,75,14])) 
