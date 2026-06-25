@@ -1,0 +1,14 @@
+def elementos_unicos(puede_tener_duplicados):
+    """
+    Dada una lista `puede_tener_duplicados` con elementos heterogéneos, retorna una nueva lista con los elementos que
+    no se repiten.
+    """
+    unicos = []
+
+    for elemento in puede_tener_duplicados:
+        if puede_tener_duplicados.count(elemento) == 1:
+            unicos.append(elemento)
+
+    return unicos
+ej:
+print(elementos_unicos([50, False, "a", 15, 20, 30, 30, 10, 15, False, 40]))
