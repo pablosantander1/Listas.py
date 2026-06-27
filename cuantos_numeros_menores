@@ -1,0 +1,16 @@
+def cuantos_numeros_menores(numeros):
+    """
+    Dada una lista `numeros`, por cada `numeros[i]` indica cuántos números en la lista son menores que él.
+    """
+    resultado = []
+
+    for numero in numeros:
+        contador = 0
+        for otro in numeros:
+            if otro < numero:
+                contador += 1
+        resultado.append(contador)
+
+    return resultado
+
+print(cuantos_numeros_menores([6, 3, 3, 4, 2]))
