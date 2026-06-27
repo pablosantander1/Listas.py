@@ -1,0 +1,21 @@
+def dos_maximos(numeros):
+    """
+    Retorna los dos números más grandes contenidos en una lista `numeros`.
+    """
+    if numeros[0] >= numeros[1]:
+        mayor = numeros[0]
+        segundo = numeros[1]
+    else:
+        mayor = numeros[1]
+        segundo = numeros[0]
+
+    for i in range(2, len(numeros)):
+        if numeros[i] > mayor:
+            segundo = mayor
+            mayor = numeros[i]
+        elif numeros[i] > segundo:
+            segundo = numeros[i]
+
+    return (mayor, segundo)
+
+print(dos_maximos([5, 3, 6, 2, 8]))
