@@ -1,0 +1,15 @@
+def sumas_parciales(numeros):
+    """
+    Dada una lista `numeros`, retorna una nueva lista donde cada elemento es la suma parcial de sí mismo más todos los
+    elementos anteriores dentro de la lista original.
+    """
+    resultado = []
+    suma = 0
+
+    for numero in numeros:
+        suma += numero
+        resultado.append(suma)
+
+    return resultado
+
+print(sumas_parciales([1, 5, 10, 12, 18]))
