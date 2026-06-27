@@ -1,0 +1,19 @@
+def descartar_ocurrencias_extra(numeros, n):
+    """
+    Dada una lista `numeros` y un número `n` retorna una nueva lista donde,
+    si un elemento aparece más de `n` veces, se conservan solo las primeras `n`.
+    """
+    contador = {}
+    resultado = []
+
+    for numero in numeros:
+        if numero not in contador:
+            contador[numero] = 0
+
+        if contador[numero] < n:
+            resultado.append(numero)
+            contador[numero] += 1
+
+    return resultado
+
+print(descartar_ocurrencias_extra([1, 2, 3, 2, 3, 3], 3))
