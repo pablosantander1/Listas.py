@@ -1,0 +1,12 @@
+def sumar_indice(numeros):
+    """
+    A cada elemento de una lista `numeros`, le suma el índice donde se encuentra.
+    """
+    resultado = []
+
+    for i in range(len(numeros)):
+        resultado.append(numeros[i] + i)
+
+    return resultado
+
+print(sumar_indice([1 , 5, 7, 9, 12, 15, 18, 22]))
