@@ -1,0 +1,16 @@
+def suma_cada_n(numeros, n):
+    """
+    Dada una lista `numeros` y un número positivo `n`, retorna la suma
+    de cada `n` elementos de la lista.
+    """
+    if n > len(numeros):
+        return 0
+
+    suma = 0
+
+    for i in range(n - 1, len(numeros), n):
+        suma += numeros[i]
+
+    return suma
+
+print(suma_cada_n([5, 2, 1, 6, 4, 9, 3, 7, 8], 3))
