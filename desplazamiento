@@ -1,0 +1,18 @@
+def es_desplazamiento(numeros1, numeros2, n):
+    """
+    Dadas dos listas (`numeros1` y `numeros2`), indica si la primera de ellas es igual a la segunda con sus elementos
+    desplazados (rotados) `n` posiciones hacia la derecha, de manera circular.
+    """
+    if len(numeros1) != len(numeros2):
+        return False
+
+    if len(numeros1) == 0:
+        return True
+
+    n = n % len(numeros2)  # Por si n es mayor que la longitud
+
+    desplazada = numeros2[-n:] + numeros2[:-n]
+
+    return numeros1 == desplazada
+
+print(es_desplazamiento([3, 4, 1, 2], [1, 2, 3, 4], 2))
