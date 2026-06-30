@@ -1,0 +1,13 @@
+def desanidar(listas):
+    """
+    Dada una lista de listas, retorna una nueva lista con un nivel
+    menos de anidamiento.
+    """
+    resultado = []
+
+    for lista in listas:
+        resultado.extend(lista)
+
+    return resultado
+      
+      print(desanidar([[1], [2, 3], [], [4]]))
