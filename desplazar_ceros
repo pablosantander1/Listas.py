@@ -1,0 +1,16 @@
+def desplazar_ceros(numeros):
+    """
+    Dada una lista `numeros` con números enteros, desplaza todos los ceros
+    hacia la derecha sin modificar el orden relativo de los demás números.
+    """
+    posicion = 0
+    for i in range(len(numeros)):
+        if numeros[i] != 0:
+            numeros[posicion] = numeros[i]
+            posicion += 1
+    while posicion < len(numeros):
+        numeros[posicion] = 0
+        posicion += 1
+    return numeros
+
+      print(desplazar_ceros([5, 8, 0, 3, 0, 0, 4]))
